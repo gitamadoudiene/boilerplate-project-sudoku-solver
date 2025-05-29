@@ -33,7 +33,8 @@ module.exports = function (app) {
 
       // Calculer indices ligne et colonne à partir de la coordonnée
       const rowChar = coordinate[0].toUpperCase();
-      const row = rowChar.charCodeAt(0) - 65; // 'A' -> 0, 'B' -> 1, ...
+    const row = rowChar.charCodeAt(0) - 65;
+
       const col = parseInt(coordinate[1], 10) - 1;
 
       // Récupérer la grille sous forme de tableau 2D

@@ -35,16 +35,17 @@ suite('Unit Tests', () => {
     const puzzle = puzzlesAndSolutions.puzzlesAndSolutions[0][0];
     assert.isFalse(solver.checkRowPlacement(puzzle, 'A', 1, '5'));
   });
-
+//Pas une bonnepratique
   test('Logic handles a valid column placement', () => {
     const puzzle = puzzlesAndSolutions.puzzlesAndSolutions[0][0];
-    assert.isFalse(solver.checkColPlacement(puzzle, 'A', 1, '7'));
+    assert.isTrue(solver.checkColPlacement(puzzle, 'A', 1, '7'));
   });
 
   test('Logic handles an invalid column placement', () => {
     const puzzle = puzzlesAndSolutions.puzzlesAndSolutions[0][0];
-    assert.isTrue(solver.checkColPlacement(puzzle, 'A', 1, '5'));
+    assert.isFalse(solver.checkColPlacement(puzzle, 'A', 1, '5'));
   });
+  // Pas une bonnepratique
 
   test('Logic handles a valid region (3x3 grid) placement', () => {
     const puzzle = puzzlesAndSolutions.puzzlesAndSolutions[0][0];

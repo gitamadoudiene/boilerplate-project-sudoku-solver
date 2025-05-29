@@ -38,11 +38,11 @@ class SudokuSolver {
   }
 
   checkColPlacement(puzzleString, row, column, value) {
+    const rowIndex = typeof row === 'string' ? row.toUpperCase().charCodeAt(0) - 65 : row;
     const grid = this.buildGrid(puzzleString);
-    const rowIndex = row.toUpperCase().charCodeAt(0) - 65;
 
     for (let r = 0; r < 9; r++) {
-      if (grid[r][column] !== '.' && grid[r][column] === value && r !== rowIndex) {
+      if (grid[r][column] === value && r !== rowIndex) {
         return false;
       }
     }
